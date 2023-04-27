@@ -1,10 +1,10 @@
-package Models;
+package Models.Interfaces;
 
 import java.util.Date;
 
-public interface BorrowedBook {
-    int getId();
-    void setId(int id);
+public interface BorrowedBookInterface {
+    int getRecordId();
+    void setRecordId(int id);
     Date getBorrowDate();
     void setBorrowDate(Date borrowDate);
     Date getReturnDate();
@@ -13,4 +13,6 @@ public interface BorrowedBook {
     void setBookId(int bookId);
     int getMemberId();
     void setMemberId(int memberId);
+    Date getDueDate();
+    void setDueDate(Date dueDate);
 }
