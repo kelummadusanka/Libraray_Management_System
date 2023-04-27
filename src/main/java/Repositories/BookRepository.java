@@ -10,4 +10,5 @@ public interface BookRepository {
     List<BookInterface> getAllBooks();
     List<BookInterface> getAvailableBooks();
     BookInterface getBookById(int id);
+    void updateBook(int bookId, BookInterface book);
 }

@@ -11,6 +11,7 @@ public interface LibraryServiceInterface {
     void addBook(int id, String title, String author);
     void removeBook(int id);
     List<BookInterface> getAvailableBooks();
+
     void borrowBook(int bookId, int memberId, Date BorrowedDate, Date DueDate);
     void returnBook(BookInterface book);
     List<BorrowedBookInterface> getBorrowedBooks();
