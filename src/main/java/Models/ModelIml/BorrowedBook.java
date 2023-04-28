@@ -12,6 +12,7 @@ public class BorrowedBook implements BorrowedBookInterface {
     private Date BorrowDate;
     private Date ReturnDate;
     private Date DueDate;
+    private  boolean isReturn;
 
 
     public BorrowedBook(int recordId, int bookId, int MemberID, Date BorrowedDate, Date dueDate){
@@ -20,6 +21,7 @@ public class BorrowedBook implements BorrowedBookInterface {
         this.MemberId = MemberID;
         this.BorrowDate = BorrowedDate;
         this.ReturnDate = dueDate;
+        this.isReturn = false;
 
     }
 
@@ -82,5 +84,16 @@ public class BorrowedBook implements BorrowedBookInterface {
     @Override
     public void setDueDate(Date dueDate) {
         DueDate = dueDate;
+    }
+
+    @Override
+    public boolean getReturnedState() {
+        return isReturn;
+    }
+
+    @Override
+    public void setReturnedState(boolean returnedState) {
+        isReturn = returnedState;
+
     }
 }

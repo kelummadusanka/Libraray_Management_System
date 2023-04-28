@@ -5,13 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="652dc80e-5dad-4e87-9b2f-a475194b93e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/Adapters/InbuildBookDbAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/Adapters/InbuildBorrowBookAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/DataLoaderInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/Factory/BookDbFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/InBuildDatabaseInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/InbuildDtabases/InBuildBookDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/InbuildDtabases/InbuildBookBorrowedDatabse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/InbuildDtabases/InbuildDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Databases/InbuildDtabases/InbuildMemberDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/CLI/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/CLI/OperationFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/CLI/Operations/addNewBookOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repositories/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Implemetaions/BookService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Implemetaions/BorrowService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databases/InBuildDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Interfaces/BookInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Interfaces/BookInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Interfaces/BorrowedBookInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Interfaces/BorrowedBookInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ModelIml/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ModelIml/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ModelIml/BorrowedBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ModelIml/BorrowedBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Implemetaions/LibraryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Implemetaions/LibraryServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Interfaces/BookServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Interfaces/BookServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Interfaces/LibraryServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Interfaces/LibraryServiceInterface.java" afterDir="false" />
+    </list>
+    <list id="368ffe1b-b497-4d3c-9e36-3e94b2168c66" name="Changes by hesha" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/CLI/CLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/CLI/Operations/removeBookOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/Interface/UIInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +127,8 @@
       <updated>1682482664653</updated>
       <workItem from="1682482666010" duration="998000" />
       <workItem from="1682483727155" duration="17647000" />
-      <workItem from="1682520639780" duration="27185000" />
+      <workItem from="1682520639780" duration="60621000" />
+      <workItem from="1682697589885" duration="1246000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <created>1682488395288</created>
@@ -125,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682589298251</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Library service class">
+      <created>1682596035755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682596035755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +171,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add model" />
     <MESSAGE value="to do database" />
-    <option name="LAST_COMMIT_MESSAGE" value="to do database" />
+    <MESSAGE value="add Library service class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Library service class" />
   </component>
 </project>

@@ -7,6 +7,6 @@ public interface BookInterface {
     void setTitle(String title);
     String getAuthor();
     void setAuthor(String author);
-    boolean setAvailability();
+    boolean getAvailability();
     void setAvailability(boolean availability);
 }

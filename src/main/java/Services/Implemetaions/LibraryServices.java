@@ -2,14 +2,12 @@ package Services.Implemetaions;
 
 import Models.Interfaces.BookInterface;
 import Models.Interfaces.BorrowedBookInterface;
-import Models.Interfaces.MemberInterface;
 import Models.ModelIml.Book;
 import Models.ModelIml.BorrowedBook;
 import Repositories.BookRepository;
 import Repositories.BorrowedBookRepository;
 import Services.Interfaces.BookServiceInterface;
 import Services.Interfaces.BorrowServiceInterface;
-import Services.Interfaces.LibraryServiceInterface;
 
 import java.util.Date;
 import java.util.List;
@@ -18,7 +16,7 @@ public class LibraryServices implements BorrowServiceInterface,BookServiceInterf
     private final BookRepository bookRepository;
     private final BorrowedBookRepository borrowedBookRepository;
 
-    LibraryServices(BookRepository bookRepository, BorrowedBookRepository borrowedBookRepository){
+    public LibraryServices(BookRepository bookRepository, BorrowedBookRepository borrowedBookRepository){
         this.bookRepository = bookRepository;
         this.borrowedBookRepository = borrowedBookRepository;
     }

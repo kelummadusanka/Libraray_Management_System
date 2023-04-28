@@ -15,4 +15,6 @@ public interface BorrowedBookInterface {
     void setMemberId(int memberId);
     Date getDueDate();
     void setDueDate(Date dueDate);
+    boolean getReturnedState();
+    void setReturnedState(boolean returnedState);
 }

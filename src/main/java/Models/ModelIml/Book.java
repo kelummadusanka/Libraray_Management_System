@@ -50,9 +50,10 @@ public class Book implements BookInterface {
     }
 
     @Override
-    public boolean setAvailability() {
+    public boolean getAvailability() {
         return Availability;
     }
+
 
     @Override
     public void setAvailability(boolean availability) {
