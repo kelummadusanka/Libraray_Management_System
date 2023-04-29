@@ -21,6 +21,7 @@ public class BorrowedBook implements BorrowedBookInterface {
         this.MemberId = MemberID;
         this.BorrowDate = BorrowedDate;
         this.ReturnDate = dueDate;
+        this.DueDate = dueDate;
         this.isReturn = false;
 
     }

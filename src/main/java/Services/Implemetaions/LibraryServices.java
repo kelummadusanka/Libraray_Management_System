@@ -10,6 +10,7 @@ import Repositories.BorrowedBookRepository;
 import Services.Interfaces.BookServiceInterface;
 import Services.Interfaces.BorrowServiceInterface;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -70,6 +71,7 @@ public class LibraryServices implements BorrowServiceInterface,BookServiceInterf
     public void returnBorrowedBook(int bookId, int memberId, Date ReturnDate) {
         BorrowedBookInterface borrowedBook = borrowedBookRepository.getBorrowedBookById(bookId);
         if(borrowedBook!=null){
+            borrowedBook.setReturnedState(true);
             borrowedBookRepository.returnBorrowedBook(bookId,ReturnDate);
             BookInterface book = bookRepository.getBookById(bookId);
             book.setAvailability(true);
@@ -85,6 +87,7 @@ public class LibraryServices implements BorrowServiceInterface,BookServiceInterf
 
     @Override
     public List<BorrowedBookInterface> getOverdueBorrowedBooks() {
+        List<BorrowedBookInterface> OverdueBorrowedBooks = new ArrayList<>();
         return borrowedBookRepository.getOverdueBorrowedBooks();
     }
 

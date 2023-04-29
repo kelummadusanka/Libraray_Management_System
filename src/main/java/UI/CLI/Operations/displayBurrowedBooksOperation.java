@@ -21,11 +21,11 @@ public class displayBurrowedBooksOperation implements Operation {
         }
 
 
-        System.out.format("\n%-10s | %-10s | %-10s | %-15s | %s%n","Record Id", "Book Id", "Member Id", "Borrowed Date", "Due Date");
-        System.out.format("%-10s | %-10s | %-10s | %-15s | %s%n", "----------", "----------", "----------", "---------------", "---------------");
+        System.out.format("\n%-10s | %-10s | %-10s | %-30s | %s%n","Record Id", "Book Id", "Member Id", "Borrowed Date", "Due Date");
+        System.out.format("%-10s | %-10s | %-10s | %-30s | %s%n", "----------", "----------", "----------", "------------------------------", "------------------------------");
 
         for (BorrowedBookInterface book : books) {
-                System.out.format("%-10s | %-10s | %-10s | %-15s | %s%n", book.getRecordId(), book.getBookId(), book.getMemberId(), book.getBorrowDate(), book.getDueDate());
+                System.out.format("%-10s | %-10s | %-10s | %-30s | %s%n", book.getRecordId(), book.getBookId(), book.getMemberId(), book.getBorrowDate(), book.getDueDate());
         }
 
     }

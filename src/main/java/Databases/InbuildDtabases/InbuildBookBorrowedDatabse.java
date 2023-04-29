@@ -35,6 +35,7 @@ public class InbuildBookBorrowedDatabse {
         save(book3);
         save(book4);
         save(book5);
+
     }
 
 
@@ -75,10 +76,11 @@ public class InbuildBookBorrowedDatabse {
         return  borrowedBookList.stream().filter(book -> ! book.getReturnedState()).toList();
     }
 
-    public List<BorrowedBookInterface> getOverDueBooks(){
-        Date now = new Date();
-        return  borrowedBookList.stream().filter(book -> now.before(book.getDueDate())).toList();
+    public List<BorrowedBookInterface> getOverDueBooks() {
+        Date now = Calendar.getInstance().getTime();
+        return borrowedBookList.stream().filter(book -> now.after(book.getDueDate())).toList();
     }
+
 
     public List<BorrowedBookInterface> getBorrwedbooksOfMember(int memberId){
         return null;
