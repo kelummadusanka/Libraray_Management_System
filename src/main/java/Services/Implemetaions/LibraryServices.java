@@ -70,7 +70,7 @@ public class LibraryServices implements BorrowServiceInterface,BookServiceInterf
     public void returnBorrowedBook(int bookId, int memberId, Date ReturnDate) {
         BorrowedBookInterface borrowedBook = borrowedBookRepository.getBorrowedBookById(bookId);
         if(borrowedBook!=null){
-            borrowedBookRepository.returnBorrowedBook(ReturnDate);
+            borrowedBookRepository.returnBorrowedBook(bookId,ReturnDate);
             BookInterface book = bookRepository.getBookById(bookId);
             book.setAvailability(true);
             bookRepository.updateBook(bookId,book);
