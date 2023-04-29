@@ -1,5 +1,6 @@
 package Services.Implemetaions;
 
+import Databases.DataLoader;
 import Models.Interfaces.BookInterface;
 import Models.Interfaces.BorrowedBookInterface;
 import Models.ModelIml.Book;
@@ -16,9 +17,9 @@ public class LibraryServices implements BorrowServiceInterface,BookServiceInterf
     private final BookRepository bookRepository;
     private final BorrowedBookRepository borrowedBookRepository;
 
-    public LibraryServices(BookRepository bookRepository, BorrowedBookRepository borrowedBookRepository){
-        this.bookRepository = bookRepository;
-        this.borrowedBookRepository = borrowedBookRepository;
+    public LibraryServices(DataLoader data){
+        this.bookRepository = data.getBookRepositray();
+        this.borrowedBookRepository = data.getBorrowedBookRepository();
     }
 
     @Override

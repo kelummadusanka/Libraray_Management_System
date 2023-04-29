@@ -4,7 +4,7 @@ import UI.CLI.Operations.addNewBookOperation;
 
 public class OperationFactory {
 
-    public static Operation createOperation(int CommandNo){
+    public static Operation createOperation(int CommandNo, LibraryServices libraryServices){
         switch (CommandNo){
             case 1:
                 return new addNewBookOperation();

@@ -7,9 +7,10 @@ import Repositories.BookRepository;
 import java.util.List;
 
 public class InbuildBookDbAdapter implements BookRepository {
-    private final InBuildBookDatabase bookDb = new InBuildBookDatabase();
+    private final InBuildBookDatabase bookDb;
 
-    public InbuildBookDbAdapter(){
+    public InbuildBookDbAdapter(InBuildBookDatabase bookDb){
+        this.bookDb = bookDb;
 
     }
 

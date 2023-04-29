@@ -7,9 +7,9 @@ import java.util.Date;
 import java.util.List;
 
 public interface BorrowedBookRepository {
-    BorrowedBook getBorrowedBookById(int bookId);
+    BorrowedBookInterface getBorrowedBookById(int bookId);
     void addBorrowedBook(BorrowedBookInterface borrowedBook);
-    void returnBorrowedBook(Date returnDate);
+    void returnBorrowedBook(int bookId, Date returnDate);
     List<BorrowedBookInterface> getAllBorrowedBooks();
     List<BorrowedBookInterface> getOverdueBorrowedBooks();
     List<BorrowedBookInterface> getBorrowedBooksByMemberId(int memberId);

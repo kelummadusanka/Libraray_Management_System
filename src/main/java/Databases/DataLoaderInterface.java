@@ -1,7 +1,5 @@
 package Databases;
 
-import Databases.Adapters.InbuildBookDbAdapter;
-import Databases.Adapters.InbuildBorrowBookAdapter;
 import Repositories.BookRepository;
 import Repositories.BorrowedBookRepository;
 import Repositories.MemberRepository;

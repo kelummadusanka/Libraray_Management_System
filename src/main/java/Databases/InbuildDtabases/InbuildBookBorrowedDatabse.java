@@ -5,10 +5,7 @@ import Models.ModelIml.BorrowedBook;
 import Models.ModelIml.Member;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 public class InbuildBookBorrowedDatabse {
@@ -17,12 +14,35 @@ public class InbuildBookBorrowedDatabse {
 
     public InbuildBookBorrowedDatabse() {
         borrowedBookList = new ArrayList<>();
-        LocalDate now = LocalDate.now();
-        //save(new BorrowedBook(1, 1, 1, now, now.plusDays(7)));
+        Date now = new Date();
+
+        // Create a Calendar instance and add 7 days
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(now);
+        calendar.add(Calendar.DATE, 7);
+
+        // Get the new date after adding 7 days
+        Date dueDate = calendar.getTime();
+
+        BorrowedBook book1 = new BorrowedBook(1, 1, 1, now, dueDate);
+        BorrowedBook book2 = new BorrowedBook(2, 2, 2, now, dueDate);
+        BorrowedBook book3 = new BorrowedBook(3, 3, 3, now, dueDate);
+        BorrowedBook book4 = new BorrowedBook(4, 4, 4, now, dueDate);
+        BorrowedBook book5 = new BorrowedBook(5, 5, 5, now, dueDate);
+
+        save(book1);
+        save(book2);
+        save(book3);
+        save(book4);
+        save(book5);
     }
+
 
     public boolean save(BorrowedBookInterface borrowedbook){
         return borrowedBookList.add(borrowedbook);
+    }
+    public BorrowedBookInterface getBorrowedBook(int bookId){
+        return borrowedBookList.stream().filter(b->b.getBookId()==bookId).findFirst().orElse(null);
     }
     public boolean removeBorrowBook(BorrowedBookInterface book){
         Optional<BorrowedBookInterface> bookToRemove = borrowedBookList.stream()
@@ -58,6 +78,10 @@ public class InbuildBookBorrowedDatabse {
     public List<BorrowedBookInterface> getOverDueBooks(){
         Date now = new Date();
         return  borrowedBookList.stream().filter(book -> now.before(book.getDueDate())).toList();
+    }
+
+    public List<BorrowedBookInterface> getBorrwedbooksOfMember(int memberId){
+        return null;
     }
 
 
